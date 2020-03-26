@@ -107,11 +107,11 @@ class MainWidget(QtWidgets.QWidget):
             #
             # Just your normal HTML color codes. Look them up.
             #
-            red = random.choice(['ff', 'dd', '99', '66', '33', '00'])
+            red = '00' #random.choice(['ff', 'dd', '99', '66', '33', '00'])
             green = random.choice(['ff', 'dd', '99', '66', '33', '00'])
             blue = random.choice(['ff', 'dd', '99', '66', '33', '00'])
             color = QtGui.QColor('#' + red + green + blue)
-            penWidth = 1
+            penWidth = random.randint(1, 25)
             pen = QtGui.QPen(color, penWidth)
             painter.setPen(pen)
             painter.drawLine(x1, y1, x2, y2)
